@@ -37,6 +37,7 @@
                 gap: 50px;
                 padding: 0px 50px;
                 background-color: #eee;
+                overflow: hidden;
             }
 
             #left-cont {
@@ -147,7 +148,34 @@
                 display: none;
             } */
 
-            @media only screen and (max-width : 1000px) {
+            @media only screen and (max-width : 991px) {
+
+                #DATS-animated-intro {
+                    position: relative;
+                    z-index: 0;
+                    padding: 0px 20px;
+                }
+
+                #right-cont {
+                    border: 1px red dashed;
+                    position: absolute;
+                    left: 50%;
+                    top: 0;
+                    transform: translateX(-63%);
+                    width: 100%;
+                    height: 100%;
+                    z-index: -1;
+                    opacity: 0.2;
+                }
+
+                #left-cont {
+                    width: 100%;
+                }
+
+                #left-cont h3 {
+                    font-size: 23px;
+                    line-height: 31px;
+                }
 
 
 
@@ -504,13 +532,6 @@
                                 autoAlpha: 0
                             });
 
-                            // left_items_els.forEach(el => {
-                            //     gsap.set(el.querySelector("h5"), {
-                            //         autoAlpha: 0,
-                            //         xPercent: -50
-                            //     });
-                            // });
-
                             gsap.set(right_cont_svg, {
                                 xPercent: 50,
                                 autoAlpha: 0
@@ -542,29 +563,6 @@
                                 ease: "power4.inOut",
                                 duration: 1
                             }, "<");
-
-                            // intro_tl.to(document.querySelectorAll("#left-cont-items-cont .lc-item")[0].querySelector("h5"), {
-                            //     xPercent: 0,
-                            //     autoAlpha: 1,
-                            //     ease: "power4.inOut",
-                            //     duration: 1
-                            // }, "<");
-
-                            // intro_tl.to(document.querySelectorAll(".arm-item-grp")[0].querySelector("line"), {
-                            //     attr: { x2: 285 }
-                            // });
-
-                            // intro_tl.to(document.querySelectorAll(".arm-item-grp")[0].querySelector(".circle-text-grp"), {
-                            //     transformOrigin: "center",
-                            //     scale: 1.5
-                            // });
-                            
-
-                            // intro_tl.to(document.querySelectorAll(".arm-item-grp")[0].querySelector("circle"), {
-                            //     stroke: hr_color,
-                            // });
-
-
 
 
                         //  Rotating Timeline
@@ -644,7 +642,6 @@
                                         }
                                     });
 
-                                    // console.log(roundedRotation);
                                 }
                             });
 
@@ -659,102 +656,164 @@
 
                             ScrollTrigger.refresh();
 
-
-                            
-
-
                     }
 
                 //  Mobile Function
                     function mobileFunction() {
-
                         //  Variables
-                            const circles_els = document.querySelectorAll("#mobile-intro-svg-el circle");
-                            const letter_items = document.querySelectorAll("#mobile-intro-svg-el .letter-item");
+                            const rotating_g = document.querySelector("#Rotating_Group");
+                            const left_items_els = document.querySelectorAll("#left-cont-items-cont .lc-item");
+                            const left_cont_h3 = document.querySelector("#left-cont h3");
+                            const right_cont_svg = document.querySelector("#right-cont svg");
+                            const hr_color = "#87b960";
+                            const sms_color = "#5466bc";
+                            const qms_color = "#e28521";
+                            const ems_color = "#70abd8";
+                            const ams_color = "#bb2c29";
+                            const cms_color = "#e5bf4c";
+
+                            const circles_colors_arr = [
+                                "#87b960", // HR color
+                                "#5466bc", // SMS color
+                                "#e28521", // QMS color
+                                "#70abd8", // EMS color
+                                "#bb2c29", // AMS color
+                                "#e5bf4c"  // CMS color
+                            ];
+
+
+
 
                         //  Sets
-                            gsap.set(letter_items[0], { // a letter
-                                transformOrigin: "center",
-                                x: -30,
-                                y: 20,
-                                rotation: 45
-                            })
+                            gsap.set(left_cont_h3, {
+                                xPercent: -50,
+                                autoAlpha: 0
+                            });
 
-                            gsap.set(letter_items[1], { // m letter
-                                transformOrigin: "center",
-                                x: -20,
-                                y: 20,
-                                rotation: -30
-                            })
+                            gsap.set(right_cont_svg, {
+                                xPercent: 50,
+                                autoAlpha: 0
+                            });
 
-                            gsap.set(letter_items[2], { // first i letter
-                                transformOrigin: "center",
-                                x: 50,
-                                y: -150,
-                                rotation: 35
-                            })
-
-                            gsap.set(letter_items[3], { // c letter
-                                transformOrigin: "center",
-                                x: -150,
-                                y: 180,
-                                rotation: -35
-                            })
-
-                            gsap.set(letter_items[4], { // i letter
-                                transformOrigin: "center",
-                                x: -170,
-                                y: 390,
-                                rotation: 25
-                            })
-
-                        //  Scroll Trigger Timeline
-                            const logo_scrub_tl = gsap.timeline({
+                        //  Intro Show Elements Timeline
+                            const intro_tl = gsap.timeline({
                               scrollTrigger: {
-                                trigger: "#intro-inner-wrapper",
+                                trigger: "#DATS-animated-intro",
+                                start: "top 50%",
+                                end: "+=250%",
+                                ease: "none",
+                                force3D: true,
+                                anticipatePin: 1,
+                                // markers: true
+                              }
+                            });
+
+                            intro_tl.to(left_cont_h3, {
+                                xPercent: 0,
+                                autoAlpha: 1,
+                                ease: "power4.inOut",
+                                duration: 1
+                            });
+
+                            intro_tl.to(right_cont_svg, {
+                                xPercent: 0,
+                                autoAlpha: 1,
+                                ease: "power4.inOut",
+                                duration: 1
+                            }, "<");
+
+
+                        //  Rotating Timeline
+                            const rotating_tl = gsap.timeline({
+                              scrollTrigger: {
+                                trigger: "#DATS-animated-intro",
                                 pin: true,
                                 pinSpacing: true,
                                 pinType: "fixed",
                                 start: "top top",
-                                end: "+=150%",
+                                end: "+=250%",
                                 scrub: 1,
                                 ease: "none",
                                 force3D: true,
                                 anticipatePin: 1,
+                                markers: true
                               }
                             });
 
-                            logo_scrub_tl.to(circles_els[0], {
-                                xPercent: -200,
-                                yPercent: 100
-                            })
 
-                            logo_scrub_tl.to(circles_els[1], {
-                                xPercent: 200,
-                                yPercent: -100
-                            }, "<")
+                            rotating_tl.to("#Rotating_Group", {   // Rotate the whole group
+                                rotation: 300,
+                                ease: "linear",
+                                transformOrigin: "50% 50%",
+                                svgOrigin: "900 300",
+                                 onUpdate: function () {
+                                    let rotation = gsap.getProperty("#Rotating_Group", "rotation") % 360;
+                                    
+                                    // Normalize rotation to always be between 0 and 360
+                                    if (rotation < 0) rotation += 360;
+                                    
+                                    // Round to nearest integer for precise detection
+                                    let roundedRotation = Math.round(rotation);
 
-                            logo_scrub_tl.to(circles_els[2], {
-                                xPercent: 0,
-                                yPercent: 100
-                            }, "<")
+                                    // Select all circles
+                                    let circle_grp_els = document.querySelectorAll("#Rotating_Group .circle-text-grp");
 
-                            logo_scrub_tl.to(circles_els[3], {
-                                xPercent: 200,
-                                yPercent: 100
-                            }, "<")
+                                    circle_grp_els.forEach((circle_grp, index) => {
+                                        // Each circle is positioned at a multiple of 60 degrees
+                                        let targetAngle = index * 60;
+                                        // Check if the current circle is at the 0-degree left position
+                                        let difference = Math.abs(targetAngle - roundedRotation) % 360;
 
-                            logo_scrub_tl.to(circles_els[4], {
-                                xPercent: 0,
-                                yPercent: -200
-                            }, "<")
+                                        if (difference < 30 || difference > 330) { // The gap should be 60, 360 / 6 segments = 60
 
-                            logo_scrub_tl.to(letter_items, {
-                                x: 0,
-                                y: 0,
-                                rotation: 0
-                            }, "<")
+                                            gsap.to(circle_grp, { //  Scale the circle and text
+                                                transformOrigin: "center",
+                                                scale: 1.5,
+                                                duration: 0.3,
+                                                ease: "power1.out" 
+                                            });
 
+                                            gsap.to(circle_grp.querySelector("circle"), { // Change the color of the circle
+                                                stroke: circles_colors_arr[index],
+                                                duration: 0.3,
+                                                ease: "power1.out" 
+                                            });
+
+                                            if (document.querySelectorAll("#left-cont-items-cont h5")[index].classList.contains("show-h5")) {
+                                                // console.log("h5 has the class show-h5");
+                                            } else {
+                                                document.querySelectorAll("#left-cont-items-cont h5").forEach(el => {
+                                                    el.classList.remove('show-h5');
+                                                });
+                                                document.querySelectorAll("#left-cont-items-cont h5")[index].classList.add('show-h5')
+                                            }
+
+                                        } else {
+
+                                            gsap.to(circle_grp, {
+                                                transformOrigin: "center",
+                                                scale: 1, 
+                                                duration: 0.3,
+                                                ease: "power1.out" 
+                                            });
+                                        
+                                        }
+                                    });
+
+                                }
+                            });
+
+                            rotating_tl.to(".arm-text", {     //  Counter Rotate the arm text to keep them horizontal
+                                rotation: -300,
+                                ease: "linear",
+                                transformOrigin: "50% 50%",
+                                svgOrigin: "900 300"
+                            }, "<");
+
+
+
+                            ScrollTrigger.refresh();
+                        
                     }
 
                 //  On Load Event
@@ -766,11 +825,11 @@
                         //  GSAP Media Query
                             let gsapMediaQueries = gsap.matchMedia();
 
-                            gsapMediaQueries.add("(min-width: 1001px)", () => {
+                            gsapMediaQueries.add("(min-width: 991px)", () => {
                                 desktopFunction();                                
                             });
 
-                            gsapMediaQueries.add("(max-width: 1000px)", () => {
+                            gsapMediaQueries.add("(max-width: 991px)", () => {
                                 mobileFunction();
                             });
                     };
