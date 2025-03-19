@@ -109,12 +109,53 @@
 
             
 
-            
-
-            
 
             #left-cont #left-cont-items-cont ul {
-                display: none;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                font-size: 38px;
+                line-height: 40px;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                font-family: sans-serif;
+                width: 100%;
+            }
+
+            #left-cont #left-cont-items-cont li {
+
+            }
+
+
+
+            #left-cont #left-cont-items-cont li:nth-of-type(1) {
+                color: #87b960;
+            }
+
+            #left-cont #left-cont-items-cont li:nth-of-type(2) {
+                color: #5466bc;
+            }
+
+            #left-cont #left-cont-items-cont li:nth-of-type(3) {
+                color: #e28521;
+            }
+
+            #left-cont #left-cont-items-cont li:nth-of-type(4) {
+                color: #70abd8;
+            }
+
+            #left-cont #left-cont-items-cont li:nth-of-type(5) {
+                color: #bb2c29;
+            }
+
+            #left-cont #left-cont-items-cont li:nth-of-type(6) {
+                color: #e5bf4c;
             }
 
             #right-cont {
@@ -537,12 +578,17 @@
                                 autoAlpha: 0
                             });
 
+                            gsap.set("#left-cont #left-cont-items-cont ul li", {
+                                xPercent: 50,
+                                autoAlpha: 0
+                            });
+
                         //  Intro Show Elements Timeline
                             const intro_tl = gsap.timeline({
                               scrollTrigger: {
                                 trigger: "#DATS-animated-intro",
                                 start: "top 50%",
-                                end: "+=250%",
+                                // end: "+=350%",
                                 ease: "none",
                                 force3D: true,
                                 anticipatePin: 1,
@@ -573,7 +619,7 @@
                                 pinSpacing: true,
                                 pinType: "fixed",
                                 start: "top top",
-                                end: "+=250%",
+                                end: "+=450%",
                                 scrub: 1,
                                 ease: "none",
                                 force3D: true,
@@ -651,6 +697,15 @@
                                 transformOrigin: "50% 50%",
                                 svgOrigin: "900 300"
                             }, "<");
+
+                            rotating_tl.to("#left-cont #left-cont-items-cont ul li", {
+                                xPercent: 0,
+                                autoAlpha: 1,
+                                stagger: 0.1,
+                                onStart: function () {
+                                    document.querySelector("#left-cont-items-cont h5:last-of-type").classList.remove('show-h5');
+                                }
+                            });
 
 
 
