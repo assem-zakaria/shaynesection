@@ -27,7 +27,14 @@
 
             .other-content {    /* Delete This */
                 height: 100vh;
+                border: 1px black dashed;
             }
+
+            .other-content:first-of-type {    /* Delete This */
+                background-color: lightblue;
+            }
+
+
 
             #DATS-animated-intro {
                 height: 100vh;
@@ -59,7 +66,7 @@
                 top: 50%;
                 transform: translateY(-50%);
                 height: 100px;
-                width: -webkit-fill-available;
+                width: 100%;
             }
 
             #left-cont #left-cont-items-cont h5 {
@@ -197,8 +204,33 @@
                     padding: 0px 20px;
                 }
 
+                #left-cont #left-cont-items-cont {
+                    position: relative;
+                    top: auto;
+                    transform: translateY(0);
+                    height: auto;
+                }
+
+                #left-cont #left-cont-items-cont h5 {
+                    font-size: 40px;
+                    line-height: 45px;
+                }
+
+                #left-cont #left-cont-items-cont ul {
+                    font-size: 24px;
+                    line-height: 28px;
+                    position: relative;
+                    left: auto;
+                    top: auto;
+                    transform: translate(0px, 0px);
+                }
+
+                #left-cont #left-cont-items-cont li {
+                    text-align: center;
+                    font-weight: 700;
+                }
+
                 #right-cont {
-                    border: 1px red dashed;
                     position: absolute;
                     left: 50%;
                     top: 0;
@@ -206,7 +238,7 @@
                     width: 100%;
                     height: 100%;
                     z-index: -1;
-                    opacity: 0.2;
+                    opacity: 0.15;
                 }
 
                 #left-cont {
@@ -226,7 +258,7 @@
 
         <!--  HTML Element  -->
         <div class="other-content">
-            <h2>FIRST SECTION CONTENT</h2>
+            <h2>DUMMY SECTION</h2>
         </div>
 
 
@@ -279,6 +311,9 @@
                             <path id="Center_Hexagon" class="st0" d="M743,291.6H616.4c-5.3,0-10.2,2.8-12.9,7.4l-63.3,109.7c-2.7,4.6-2.7,10.3,0,14.9
                                 l63.3,109.7c2.7,4.6,7.6,7.4,12.9,7.4H743c5.3,0,10.2-2.8,12.9-7.4l63.3-109.7c2.7-4.6,2.7-10.3,0-14.9l-63.3-109.7
                                 C753.2,294.4,748.3,291.6,743,291.6z"/>
+
+                            <image width="348" height="318" id="Scratches_x5F_Img" xlink:href="../images/molecule.png"  transform="matrix(0.7043 1.077852e-02 -1.077852e-02 0.7043 561.4279 302.1909)">
+                                    </image>
 
                             <g id="HR_Group" class="arm-item-grp">
                                 <line class="st0" x1="537.9" y1="416.2" x2="432.2" y2="416.2"/>
@@ -411,102 +446,8 @@
 
                         </g>
 
-                        <g id="Fixed_Logo">
-                            <path class="st2" d="M635.8,408c0,1.4-0.2,2.8-0.7,4.3c-0.5,1.5-1.1,2.8-2,3.9c-0.8,1.2-1.9,2.2-3.1,2.9c-1.2,0.8-2.6,1.2-4.2,1.3
-                                h-33.8c-0.8,0-1.4-0.3-1.9-0.8c-0.5-0.5-0.8-1.2-0.8-1.9v-19.4c0-0.8,0.3-1.4,0.8-1.9c0.5-0.5,1.2-0.8,1.9-0.8h33.2
-                                c1.6,0,3.1,0.4,4.4,1.1c1.3,0.8,2.4,1.7,3.3,2.9c0.9,1.2,1.6,2.5,2.1,4S635.8,406.6,635.8,408L635.8,408z M594.8,401.1V415h29.3
-                                c1.3,0,2.4-0.2,3.2-0.7c0.8-0.5,1.5-1,2-1.7c0.5-0.7,0.8-1.4,1-2.2c0.2-0.8,0.3-1.6,0.3-2.2s-0.1-1.4-0.3-2.2
-                                c-0.2-0.8-0.5-1.6-1-2.2c-0.5-0.7-1.1-1.3-2-1.7c-0.8-0.5-1.9-0.7-3.2-0.7L594.8,401.1L594.8,401.1z"/>
-                            <path class="st2" d="M644.9,419.4c-0.6,0.7-1.3,1-2.1,1s-1.4-0.3-1.9-0.8c-0.5-0.5-0.8-1.2-0.8-1.9s0.2-1.2,0.6-1.7l13.9-18.6
-                                c0.6-0.9,1.5-1.6,2.6-2.1c1.1-0.6,2.2-0.8,3.4-0.8s2.2,0.3,3.3,0.7c1,0.5,1.9,1.2,2.5,2.1l13.9,18.5c0.2,0.3,0.4,0.6,0.6,0.9
-                                c0.1,0.3,0.2,0.7,0.2,1c0,0.8-0.3,1.4-0.8,1.9c-0.5,0.5-1.2,0.8-1.9,0.8c-0.8,0-1.6-0.3-2.2-1.1l-13.3-17.7c-0.3-0.3-0.6-0.6-1-1
-                                c-0.4-0.3-0.8-0.6-1.2-0.6s-0.8,0.2-1.2,0.6c-0.4,0.3-0.7,0.7-0.9,1L645,419.4L644.9,419.4z M656.9,414.3c0-1,0.3-1.8,1-2.5
-                                c0.7-0.7,1.5-1,2.5-1c1,0,1.8,0.3,2.5,1c0.7,0.7,1,1.5,1,2.5c0,1-0.3,1.8-1,2.5c-0.7,0.7-1.5,1-2.5,1c-1,0-1.8-0.3-2.5-1
-                                C657.3,416.1,656.9,415.3,656.9,414.3z"/>
-                            <path class="st2" d="M734.5,410.1c-0.9-0.4-1.7-0.9-2.4-1.6c-0.7-0.7-1.2-1.5-1.6-2.4c-0.4-0.9-0.6-1.9-0.6-3s0.2-2.1,0.6-3
-                                c0.4-0.9,0.9-1.7,1.6-2.4c0.7-0.7,1.5-1.2,2.4-1.6c0.9-0.4,1.9-0.6,3-0.6H772c0.8,0,1.4,0.3,1.9,0.8c0.5,0.5,0.8,1.2,0.8,1.9
-                                c0,0.8-0.3,1.4-0.8,1.9c-0.5,0.5-1.2,0.8-1.9,0.8h-34.7c-0.6,0-1.1,0.2-1.5,0.6c-0.4,0.4-0.7,0.9-0.7,1.5s0.2,1.1,0.7,1.5
-                                c0.4,0.4,0.9,0.6,1.5,0.6h31.5c1.1,0,2.1,0.2,3,0.6c0.9,0.4,1.7,0.9,2.4,1.6c0.7,0.7,1.2,1.5,1.6,2.4c0.4,0.9,0.6,1.9,0.6,3
-                                c0,1.1-0.2,2.1-0.6,3c-0.4,0.9-0.9,1.7-1.6,2.4c-0.7,0.7-1.5,1.2-2.4,1.6c-0.9,0.4-1.9,0.6-3,0.6h-34.5c-0.8,0-1.4-0.3-1.9-0.8
-                                c-0.5-0.5-0.8-1.2-0.8-1.9s0.3-1.4,0.8-1.9c0.5-0.5,1.2-0.8,1.9-0.8h34.8c0.6,0,1.1-0.2,1.5-0.6c0.4-0.4,0.6-0.9,0.6-1.5
-                                c0-0.6-0.2-1.1-0.6-1.5c-0.4-0.4-0.9-0.6-1.5-0.6h-31.6C736.3,410.8,735.4,410.6,734.5,410.1L734.5,410.1z"/>
-                            <path class="st2" d="M589.3,436.5v-9h3c0.9,0,1.6,0.1,2.2,0.3c0.6,0.2,1,0.6,1.4,1c0.6,0.8,1,1.7,1,3s-0.4,2.5-1.1,3.4
-                                c-0.4,0.5-0.9,0.8-1.4,1c-0.5,0.2-1.2,0.3-2,0.3H589.3z M590.6,435.6h1.7c1.2,0,2-0.3,2.5-1c0.5-0.7,0.8-1.6,0.8-2.7
-                                s-0.3-1.9-0.8-2.5c-0.3-0.4-0.7-0.6-1.1-0.8c-0.4-0.1-1.1-0.2-2-0.2h-1V435.6z"/>
-                            <path class="st2" d="M598.9,428.7v-1.2h1.2v1.2H598.9z M598.9,436.5v-6.7h1.2v6.7H598.9z"/>
-                            <path class="st2" d="M602.6,438.7l0.1-1c0.7,0.3,1.4,0.5,2.1,0.5c1.4,0,2-0.7,2-2.2v-1c-0.2,0.4-0.5,0.8-0.9,1
-                                c-0.4,0.2-0.8,0.4-1.3,0.4c-0.8,0-1.5-0.3-1.9-0.9c-0.5-0.6-0.7-1.4-0.7-2.4s0.3-1.8,0.8-2.5c0.5-0.6,1.2-1,2.1-1s1.4,0.3,1.9,0.9
-                                v-0.8h1.2v4.8c0,1-0.1,1.8-0.2,2.3c-0.1,0.5-0.3,0.9-0.6,1.2c-0.5,0.6-1.3,0.8-2.5,0.8C603.6,439,603.2,438.9,602.6,438.7
-                                L602.6,438.7z M606.8,434.2v-2.8c-0.5-0.6-1.1-0.8-1.7-0.8s-1,0.2-1.3,0.7c-0.3,0.4-0.5,1-0.5,1.8c0,1.5,0.5,2.2,1.5,2.2
-                                C605.9,435.3,606.2,434.9,606.8,434.2L606.8,434.2z"/>
-                            <path class="st2" d="M610.5,428.7v-1.2h1.2v1.2H610.5z M610.5,436.5v-6.7h1.2v6.7H610.5z"/>
-                            <path class="st2" d="M617.2,436.5c-0.4,0.1-0.7,0.1-1,0.1c-0.6,0-1.1-0.2-1.4-0.5c-0.3-0.3-0.5-0.8-0.5-1.5v-3.9h-0.8v-0.9h0.8
-                                v-1.2l1.2-0.1v1.3h1.7v0.9h-1.7v3.7c0,0.9,0.4,1.3,1.1,1.3c0.8,0,0.3,0,0.6-0.1L617.2,436.5L617.2,436.5z"/>
-                            <path class="st2" d="M622.4,435.7c-0.7,0.7-1.4,1-2.1,1c-0.7,0-1-0.2-1.4-0.5c-0.3-0.3-0.6-0.8-0.6-1.3s0.3-1.3,0.9-1.7
-                                c0.6-0.4,1.5-0.6,2.6-0.6h0.3v-0.8c0-0.8-0.4-1.2-1.2-1.2c-0.8,0-1.3,0.2-2,0.6v-1c0.8-0.3,1.6-0.5,2.3-0.5s1.3,0.2,1.6,0.5
-                                c0.3,0.3,0.5,0.8,0.5,1.6v3c0,0.7,0.2,1,0.6,1h0.2l0.1,0.7c-0.3,0.1-0.6,0.2-0.9,0.2C622.9,436.7,622.6,436.4,622.4,435.7
-                                L622.4,435.7z M622.3,435v-1.7h-0.4c-0.7,0-1.2,0.1-1.6,0.3c-0.4,0.3-0.6,0.6-0.6,1c0,0.4,0.1,0.5,0.3,0.7
-                                c0.2,0.2,0.5,0.3,0.8,0.3C621.2,435.6,621.7,435.4,622.3,435L622.3,435z"/>
-                            <path class="st2" d="M626,426.9h1.2v9.7H626V426.9z"/>
-                            <path class="st2" d="M632.7,436.5l3.6-9h1.3l3.6,9h-1.4l-1-2.5h-3.8l-1,2.5H632.7z M635.3,433h3.1l-1.5-3.9L635.3,433L635.3,433z"
-                                />
-                            <path class="st2" d="M647.2,436.3c-0.8,0.2-1.5,0.3-2,0.3c-0.9,0-1.6-0.3-2.2-1c-0.6-0.7-0.9-1.5-0.9-2.5c0-1,0.3-1.9,0.9-2.5
-                                s1.4-0.9,2.4-0.9c1,0,1.1,0.1,1.7,0.2v1c-0.7-0.2-1.2-0.3-1.7-0.3c-0.6,0-1.1,0.2-1.5,0.7c-0.4,0.5-0.6,1.1-0.6,1.9
-                                s0.2,1.3,0.6,1.8c0.4,0.5,0.9,0.7,1.5,0.7c0.6,0,1.1-0.1,1.7-0.4V436.3L647.2,436.3z"/>
-                            <path class="st2" d="M652.1,436.5c-0.4,0.1-0.7,0.1-1,0.1c-0.6,0-1.1-0.2-1.4-0.5c-0.3-0.3-0.5-0.8-0.5-1.5v-3.9h-0.8v-0.9h0.8
-                                v-1.2l1.2-0.1v1.3h1.7v0.9h-1.7v3.7c0,0.9,0.4,1.3,1.1,1.3s0.3,0,0.6-0.1V436.5L652.1,436.5z"/>
-                            <path class="st2" d="M653.9,428.7v-1.2h1.2v1.2H653.9z M653.9,436.5v-6.7h1.2v6.7H653.9z"/>
-                            <path class="st2" d="M660.3,436.7c-1,0-1.7-0.3-2.3-0.9c-0.6-0.6-0.8-1.5-0.8-2.5s0.3-1.9,0.8-2.5c0.6-0.6,1.3-0.9,2.3-0.9
-                                s1.7,0.3,2.3,0.9c0.6,0.6,0.8,1.5,0.8,2.5c0,1.1-0.3,1.9-0.8,2.5C662,436.3,661.3,436.7,660.3,436.7z M660.3,435.8
-                                c0.6,0,1.1-0.2,1.4-0.7c0.3-0.4,0.5-1.1,0.5-1.9c0-0.8-0.2-1.5-0.5-1.9c-0.3-0.4-0.8-0.7-1.4-0.7s-1.1,0.2-1.4,0.7
-                                c-0.3,0.4-0.5,1.1-0.5,1.9c0,0.8,0.2,1.5,0.5,1.9C659.2,435.5,659.7,435.8,660.3,435.8z"/>
-                            <path class="st2" d="M665.4,436.5v-6.7h1.2v1.3c0.6-0.9,1.4-1.4,2.3-1.4c0.9,0,1,0.2,1.4,0.6c0.3,0.4,0.5,0.8,0.5,1.5v4.8h-1.2
-                                v-4.4c0-0.5-0.1-0.8-0.2-1c-0.1-0.2-0.4-0.3-0.7-0.3c-0.7,0-1.4,0.5-2.1,1.5v4.3H665.4z"/>
-                            <path class="st2" d="M679.5,436.5v-8.1h-3.2v-1h7.7v1h-3.2v8.1H679.5z"/>
-                            <path class="st2" d="M685.4,436.5v-6.7h1.2v1.3c0.5-0.9,1.2-1.4,2.1-1.4c0.9,0,0.3,0,0.4,0v1.1c-0.2-0.1-0.4-0.1-0.6-0.1
-                                c-0.8,0-1.4,0.5-1.9,1.4v4.4L685.4,436.5z"/>
-                            <path class="st2" d="M694.1,435.7c-0.7,0.7-1.4,1-2.1,1c-0.7,0-1-0.2-1.4-0.5c-0.4-0.3-0.6-0.8-0.6-1.3s0.3-1.3,0.9-1.7
-                                c0.6-0.4,1.5-0.6,2.6-0.6h0.3v-0.8c0-0.8-0.4-1.2-1.2-1.2c-0.8,0-1.3,0.2-2,0.6v-1c0.8-0.3,1.6-0.5,2.3-0.5s1.3,0.2,1.6,0.5
-                                c0.3,0.3,0.5,0.8,0.5,1.6v3c0,0.7,0.2,1,0.6,1h0.2l0.1,0.7c-0.3,0.1-0.6,0.2-0.9,0.2C694.6,436.7,694.2,436.4,694.1,435.7
-                                L694.1,435.7z M693.9,435v-1.7h-0.4c-0.7,0-1.2,0.1-1.6,0.3c-0.4,0.3-0.6,0.6-0.6,1c0,0.4,0.1,0.5,0.3,0.7s0.5,0.3,0.8,0.3
-                                C692.8,435.6,693.4,435.4,693.9,435L693.9,435z"/>
-                            <path class="st2" d="M702.3,436.3c-0.8,0.2-1.5,0.3-2,0.3c-0.9,0-1.6-0.3-2.2-1c-0.6-0.7-0.9-1.5-0.9-2.5c0-1,0.3-1.9,0.9-2.5
-                                c0.6-0.6,1.4-0.9,2.4-0.9c1,0,1.1,0.1,1.7,0.2v1c-0.7-0.2-1.2-0.3-1.7-0.3c-0.6,0-1.1,0.2-1.5,0.7c-0.4,0.5-0.6,1.1-0.6,1.9
-                                s0.2,1.3,0.6,1.8c0.4,0.5,0.9,0.7,1.5,0.7s1.1-0.1,1.7-0.4V436.3L702.3,436.3z"/>
-                            <path class="st2" d="M704.2,436.5v-9.7h1.2v6.3l2.8-3.2h1.3l-2.7,3.1l3.3,3.6h-1.5l-3.1-3.4v3.4L704.2,436.5z"/>
-                            <path class="st2" d="M711.6,428.7v-1.2h1.2v1.2H711.6z M711.6,436.5v-6.7h1.2v6.7H711.6z"/>
-                            <path class="st2" d="M715.4,436.5v-6.7h1.2v1.3c0.6-0.9,1.4-1.4,2.3-1.4c0.9,0,1,0.2,1.4,0.6c0.3,0.4,0.5,0.8,0.5,1.5v4.8h-1.2
-                                v-4.4c0-0.5-0.1-0.8-0.2-1c-0.1-0.2-0.4-0.3-0.7-0.3c-0.7,0-1.4,0.5-2.1,1.5v4.3H715.4z"/>
-                            <path class="st2" d="M723.3,438.7l0.1-1c0.7,0.3,1.4,0.5,2.1,0.5c1.4,0,2-0.7,2-2.2v-1c-0.2,0.4-0.5,0.8-0.9,1
-                                c-0.4,0.2-0.8,0.4-1.3,0.4c-0.8,0-1.5-0.3-1.9-0.9c-0.5-0.6-0.7-1.4-0.7-2.4s0.3-1.8,0.8-2.5c0.5-0.6,1.2-1,2.1-1s1.4,0.3,1.9,0.9
-                                v-0.8h1.2v4.8c0,1-0.1,1.8-0.2,2.3c-0.1,0.5-0.3,0.9-0.6,1.2c-0.5,0.6-1.3,0.8-2.5,0.8S723.9,438.9,723.3,438.7L723.3,438.7z
-                                 M727.5,434.2v-2.8c-0.5-0.6-1.1-0.8-1.7-0.8c-0.6,0-1,0.2-1.3,0.7s-0.5,1-0.5,1.8c0,1.5,0.5,2.2,1.5,2.2
-                                C726.6,435.3,726.9,434.9,727.5,434.2L727.5,434.2z"/>
-                            <path class="st2" d="M734.6,436.3v-1.3c1,0.5,1.9,0.7,2.5,0.7s0.9-0.1,1.2-0.4c0.3-0.3,0.5-0.6,0.5-1s-0.1-0.7-0.3-0.9
-                                c-0.2-0.3-0.6-0.5-1.1-0.8l-0.6-0.3c-0.8-0.4-1.3-0.8-1.6-1.3c-0.3-0.4-0.5-0.8-0.5-1.4s0.3-1.3,0.8-1.7c0.5-0.5,1.2-0.7,1.9-0.7
-                                c0.8,0,1.4,0.1,2.2,0.3v1.2c-1-0.4-1.7-0.6-2.1-0.6s-0.8,0.1-1.1,0.3c-0.3,0.2-0.4,0.5-0.4,0.9c0,0.4,0.1,0.6,0.3,0.8
-                                s0.6,0.5,1.2,0.8l0.6,0.4c0.8,0.4,1.3,0.9,1.6,1.3c0.3,0.4,0.5,0.9,0.5,1.4c0,0.8-0.3,1.4-0.9,1.9s-1.3,0.7-2.3,0.7
-                                S735.6,436.6,734.6,436.3L734.6,436.3z"/>
-                            <path class="st2" d="M742.5,438.9l1.1-2.4l-2.6-6.6h1.3l1.9,5l2-5h1.1l-3.6,9.1L742.5,438.9L742.5,438.9z"/>
-                            <path class="st2" d="M748.5,436.3v-1.1c0.8,0.4,1.5,0.6,2.1,0.6c0.6,0,0.6-0.1,0.9-0.3c0.2-0.2,0.3-0.4,0.3-0.7c0-0.4-0.3-0.8-1-1
-                                l-0.7-0.3c-1-0.4-1.6-1-1.6-1.9s0.2-1,0.6-1.4c0.4-0.3,1-0.5,1.7-0.5s0.8,0.1,1.4,0.1l0.3,0.1v1c-0.7-0.2-1.2-0.3-1.6-0.3
-                                s-0.6,0.1-0.8,0.2c-0.2,0.1-0.3,0.3-0.3,0.6c0,0.3,0.3,0.7,0.9,0.9l0.6,0.2c0.7,0.3,1.1,0.6,1.4,0.9c0.3,0.3,0.4,0.7,0.4,1.2
-                                c0,0.5-0.2,1.1-0.7,1.4c-0.5,0.4-1,0.6-1.8,0.6S749.3,436.6,748.5,436.3L748.5,436.3z"/>
-                            <path class="st2" d="M758.2,436.5c-0.4,0.1-0.7,0.1-1,0.1c-0.6,0-1.1-0.2-1.4-0.5c-0.3-0.3-0.5-0.8-0.5-1.5v-3.9h-0.8v-0.9h0.8
-                                v-1.2l1.2-0.1v1.3h1.7v0.9h-1.7v3.7c0,0.9,0.4,1.3,1.1,1.3s0.3,0,0.6-0.1V436.5L758.2,436.5z"/>
-                            <path class="st2" d="M764.9,436.3c-0.8,0.2-1.5,0.4-2.1,0.4c-1,0-1.8-0.3-2.4-1c-0.6-0.6-0.9-1.5-0.9-2.5s0.3-1.8,0.8-2.5
-                                c0.6-0.6,1.3-1,2.1-1s1.4,0.3,1.9,0.9c0.4,0.6,0.7,1.4,0.7,2.4v0.4h-4.2c0.2,1.6,1,2.4,2.3,2.4c1.4,0,1.1-0.1,1.9-0.4L764.9,436.3
-                                L764.9,436.3z M760.8,432.5h2.9c0-1.3-0.5-1.9-1.4-1.9C761.4,430.6,760.9,431.2,760.8,432.5z"/>
-                            <path class="st2" d="M767.1,436.5v-6.7h1.2v1.3c0.6-0.9,1.3-1.4,2.3-1.4s1.5,0.5,1.8,1.4c0.6-0.9,1.3-1.4,2.2-1.4
-                                c0.9,0,1,0.2,1.4,0.5c0.3,0.3,0.5,0.8,0.5,1.5v4.8h-1.2v-4.7c0-0.8-0.3-1.1-0.9-1.1s-1.3,0.4-2,1.3v4.5h-1.2v-4.7
-                                c0-0.8-0.3-1.1-0.9-1.1s-1.3,0.4-1.9,1.3v4.5L767.1,436.5z"/>
-                            <path class="st3" d="M589.3,423.4h187.1v0.5H589.3V423.4z"/>
-                            <path class="st4" d="M723.3,396.4c-0.5-0.5-1.2-0.8-1.9-0.8h-39.2c-0.8,0-1.4,0.3-1.9,0.8c-0.5,0.5-0.8,1.2-0.8,1.9
-                                s0.3,1.4,0.8,1.9c0.5,0.5,1.2,0.8,1.9,0.8H699v16.6c0,0.8,0.3,1.4,0.8,1.9c0.5,0.5,1.2,0.8,1.9,0.8c0.8,0,1.4-0.3,1.9-0.8
-                                c0.5-0.5,0.8-1.2,0.8-1.9v-16.6h17.1c0.7-0.1,1.3-0.4,1.8-0.9c0.5-0.5,0.7-1.1,0.7-1.9S723.9,396.9,723.3,396.4L723.3,396.4z"/>
-                        </g>
-
                     </svg>
+
 
 
                 </div>
@@ -514,19 +455,19 @@
         </div>
 
         <div class="other-content">
-            <h2>OTHER CONTENT</h2>
+            <h2>DUMMY CONTENT</h2>
         </div>
 
         <div class="other-content">
-            <h2>OTHER CONTENT</h2>
+            <h2>DUMMY CONTENT</h2>
         </div>
 
         <div class="other-content">
-            <h2>OTHER CONTENT</h2>
+            <h2>DUMMY CONTENT</h2>
         </div>
 
         <div class="other-content">
-            <h2>OTHER CONTENT</h2>
+            <h2>DUMMY CONTENT</h2>
         </div>
 
 
@@ -554,7 +495,7 @@
                             const ems_color = "#70abd8";
                             const ams_color = "#bb2c29";
                             const cms_color = "#e5bf4c";
-
+                            let circle_grp_els = document.querySelectorAll("#Rotating_Group .circle-text-grp");
                             const circles_colors_arr = [
                                 "#87b960", // HR color
                                 "#5466bc", // SMS color
@@ -563,9 +504,6 @@
                                 "#bb2c29", // AMS color
                                 "#e5bf4c"  // CMS color
                             ];
-
-
-
 
                         //  Sets
                             gsap.set(left_cont_h3, {
@@ -579,7 +517,7 @@
                             });
 
                             gsap.set("#left-cont #left-cont-items-cont ul li", {
-                                xPercent: 50,
+                                xPercent: 30,
                                 autoAlpha: 0
                             });
 
@@ -588,7 +526,6 @@
                               scrollTrigger: {
                                 trigger: "#DATS-animated-intro",
                                 start: "top 50%",
-                                // end: "+=350%",
                                 ease: "none",
                                 force3D: true,
                                 anticipatePin: 1,
@@ -610,7 +547,6 @@
                                 duration: 1
                             }, "<");
 
-
                         //  Rotating Timeline
                             const rotating_tl = gsap.timeline({
                               scrollTrigger: {
@@ -619,15 +555,21 @@
                                 pinSpacing: true,
                                 pinType: "fixed",
                                 start: "top top",
-                                end: "+=450%",
+                                end: "+=500%",
                                 scrub: 1,
                                 ease: "none",
                                 force3D: true,
-                                anticipatePin: 1,
-                                markers: true
+                                anticipatePin: 0.5,
+                                once: true,
+                                // markers: true,
+                                onLeave: function(self) {
+                                    //  Since its scrub and pin and once, it will create a gap on top of the element after finish, use this code to prevent this gap 
+                                    self.scroll(self.start);
+                                    self.disable()
+                                    self.animation.progress(1)
+                                  }
                               }
                             });
-
 
                             rotating_tl.to("#Rotating_Group", {   // Rotate the whole group
                                 rotation: 300,
@@ -635,6 +577,7 @@
                                 transformOrigin: "50% 50%",
                                 svgOrigin: "900 300",
                                  onUpdate: function () {
+
                                     let rotation = gsap.getProperty("#Rotating_Group", "rotation") % 360;
                                     
                                     // Normalize rotation to always be between 0 and 360
@@ -642,9 +585,6 @@
                                     
                                     // Round to nearest integer for precise detection
                                     let roundedRotation = Math.round(rotation);
-
-                                    // Select all circles
-                                    let circle_grp_els = document.querySelectorAll("#Rotating_Group .circle-text-grp");
 
                                     circle_grp_els.forEach((circle_grp, index) => {
                                         // Each circle is positioned at a multiple of 60 degrees
@@ -656,7 +596,7 @@
 
                                             gsap.to(circle_grp, { //  Scale the circle and text
                                                 transformOrigin: "center",
-                                                scale: 1.5,
+                                                scale: 1.8,
                                                 duration: 0.3,
                                                 ease: "power1.out" 
                                             });
@@ -688,6 +628,19 @@
                                         }
                                     });
 
+                                },
+                                onComplete: () => {
+
+                                    gsap.to(circle_grp_els[circle_grp_els.length - 1], { //  Scale the circle and text
+                                        transformOrigin: "center",
+                                        scale: 1,
+                                        duration: 0.3,
+                                        ease: "power1.out" 
+                                    });
+
+                                    document.querySelectorAll("#left-cont-items-cont h5").forEach(el => {
+                                        el.classList.remove('show-h5');
+                                    });
                                 }
                             });
 
@@ -702,12 +655,7 @@
                                 xPercent: 0,
                                 autoAlpha: 1,
                                 stagger: 0.1,
-                                onStart: function () {
-                                    document.querySelector("#left-cont-items-cont h5:last-of-type").classList.remove('show-h5');
-                                }
                             });
-
-
 
                             ScrollTrigger.refresh();
 
@@ -715,6 +663,7 @@
 
                 //  Mobile Function
                     function mobileFunction() {
+                        
                         //  Variables
                             const rotating_g = document.querySelector("#Rotating_Group");
                             const left_items_els = document.querySelectorAll("#left-cont-items-cont .lc-item");
@@ -726,7 +675,7 @@
                             const ems_color = "#70abd8";
                             const ams_color = "#bb2c29";
                             const cms_color = "#e5bf4c";
-
+                            let circle_grp_els = document.querySelectorAll("#Rotating_Group .circle-text-grp");
                             const circles_colors_arr = [
                                 "#87b960", // HR color
                                 "#5466bc", // SMS color
@@ -735,9 +684,6 @@
                                 "#bb2c29", // AMS color
                                 "#e5bf4c"  // CMS color
                             ];
-
-
-
 
                         //  Sets
                             gsap.set(left_cont_h3, {
@@ -750,12 +696,16 @@
                                 autoAlpha: 0
                             });
 
+                            gsap.set("#left-cont #left-cont-items-cont ul li", {
+                                xPercent: 30,
+                                autoAlpha: 0
+                            });
+
                         //  Intro Show Elements Timeline
                             const intro_tl = gsap.timeline({
                               scrollTrigger: {
                                 trigger: "#DATS-animated-intro",
                                 start: "top 50%",
-                                end: "+=250%",
                                 ease: "none",
                                 force3D: true,
                                 anticipatePin: 1,
@@ -777,7 +727,6 @@
                                 duration: 1
                             }, "<");
 
-
                         //  Rotating Timeline
                             const rotating_tl = gsap.timeline({
                               scrollTrigger: {
@@ -786,15 +735,21 @@
                                 pinSpacing: true,
                                 pinType: "fixed",
                                 start: "top top",
-                                end: "+=250%",
+                                end: "+=500%",
                                 scrub: 1,
                                 ease: "none",
                                 force3D: true,
-                                anticipatePin: 1,
-                                markers: true
+                                anticipatePin: 0.5,
+                                once: true,
+                                // markers: true,
+                                onLeave: function(self) {
+                                    //  Since its scrub and pin and once, it will create a gap on top of the element after finish, use this code to prevent this gap 
+                                    self.scroll(self.start);
+                                    self.disable()
+                                    self.animation.progress(1)
+                                  }
                               }
                             });
-
 
                             rotating_tl.to("#Rotating_Group", {   // Rotate the whole group
                                 rotation: 300,
@@ -802,6 +757,7 @@
                                 transformOrigin: "50% 50%",
                                 svgOrigin: "900 300",
                                  onUpdate: function () {
+
                                     let rotation = gsap.getProperty("#Rotating_Group", "rotation") % 360;
                                     
                                     // Normalize rotation to always be between 0 and 360
@@ -809,9 +765,6 @@
                                     
                                     // Round to nearest integer for precise detection
                                     let roundedRotation = Math.round(rotation);
-
-                                    // Select all circles
-                                    let circle_grp_els = document.querySelectorAll("#Rotating_Group .circle-text-grp");
 
                                     circle_grp_els.forEach((circle_grp, index) => {
                                         // Each circle is positioned at a multiple of 60 degrees
@@ -823,7 +776,7 @@
 
                                             gsap.to(circle_grp, { //  Scale the circle and text
                                                 transformOrigin: "center",
-                                                scale: 1.5,
+                                                scale: 1.8,
                                                 duration: 0.3,
                                                 ease: "power1.out" 
                                             });
@@ -855,6 +808,19 @@
                                         }
                                     });
 
+                                },
+                                onComplete: () => {
+
+                                    gsap.to(circle_grp_els[circle_grp_els.length - 1], { //  Scale the circle and text
+                                        transformOrigin: "center",
+                                        scale: 1,
+                                        duration: 0.3,
+                                        ease: "power1.out" 
+                                    });
+
+                                    document.querySelectorAll("#left-cont-items-cont h5").forEach(el => {
+                                        el.classList.remove('show-h5');
+                                    });
                                 }
                             });
 
@@ -865,10 +831,14 @@
                                 svgOrigin: "900 300"
                             }, "<");
 
-
+                            rotating_tl.to("#left-cont #left-cont-items-cont ul li", {
+                                xPercent: 0,
+                                autoAlpha: 1,
+                                stagger: 0.1,
+                            });
 
                             ScrollTrigger.refresh();
-                        
+
                     }
 
                 //  On Load Event
