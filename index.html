@@ -11,257 +11,220 @@
 
 <body>
 
-        <!--  CSS  -->
-        <style type="text/css">
+        <!-- Begin Required CSS  -->
+            <style type="text/css">
 
-            html {
-                box-sizing: border-box;
-                overflow-x: hidden;
-                width: 100%;
-            }
+                html {
+                    box-sizing: border-box;
+                    overflow-x: hidden;
+                    width: 100%;
+                }
 
-            body {
-                margin: 0;
-                padding: 0;
-            }
+                body {
+                    margin: 0;
+                    padding: 0;
+                }
 
-            .other-content {    /* Delete This */
-                height: 100vh;
-                border: 1px black dashed;
-            }
+                .dummy-section {    /* Delete This */
+                    height: 100vh;
+                    border: 1px black dashed;
+                }
 
-            .other-content:first-of-type {    /* Delete This */
-                background-color: lightblue;
-            }
-
-
-
-            #DATS-animated-intro {
-                height: 100vh;
-                width: 100%;
-                box-sizing: border-box;
-                display: flex;
-                gap: 50px;
-                padding: 0px 50px;
-                background-color: #eee;
-                overflow: hidden;
-            }
-
-            #left-cont {
-                width: 50%;
-                padding: 60px 0px;
-                position: relative;
-            }
-
-            #left-cont h3 {
-                font-size: 40px;
-                line-height: 45px;
-                color: black;
-                font-family: sans-serif;
-                text-align: center;
-            }
-
-            #left-cont #left-cont-items-cont {
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                height: 100px;
-                width: 100%;
-            }
-
-            #left-cont #left-cont-items-cont h5 {
-                font-family: sans-serif;
-                font-size: 50px;
-                line-height: 55px;
-                margin: 0;
-                text-align: center;
-                width: 100%;
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, calc(-50% + 50px));
-                opacity: 0;
-                transition: all 0.7s cubic-bezier(0.190, 1.000, 0.220, 1.000);
-            }
-
-            #left-cont #left-cont-items-cont h5.show-h5 {
-                opacity: 1;
-                transform: translate(-50%, -50%);
-            }
-
-
-            #left-cont #left-cont-items-cont h5:nth-of-type(1) {
-                color: #87b960;
-            }
-
-            #left-cont #left-cont-items-cont h5:nth-of-type(2) {
-                color: #5466bc;
-            }
-
-            #left-cont #left-cont-items-cont h5:nth-of-type(3) {
-                color: #e28521;
-            }
-
-            #left-cont #left-cont-items-cont h5:nth-of-type(4) {
-                color: #70abd8;
-            }
-
-            #left-cont #left-cont-items-cont h5:nth-of-type(5) {
-                color: #bb2c29;
-            }
-
-            #left-cont #left-cont-items-cont h5:nth-of-type(6) {
-                color: #e5bf4c;
-            }
-
-            
-
-
-            #left-cont #left-cont-items-cont ul {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 10px;
-                list-style: none;
-                padding: 0;
-                margin: 0;
-                font-size: 38px;
-                line-height: 40px;
-                position: absolute;
-                left: 0;
-                top: 50%;
-                transform: translateY(-50%);
-                font-family: sans-serif;
-                width: 100%;
-            }
-
-            #left-cont #left-cont-items-cont li {
-
-            }
-
-
-
-            #left-cont #left-cont-items-cont li:nth-of-type(1) {
-                color: #87b960;
-            }
-
-            #left-cont #left-cont-items-cont li:nth-of-type(2) {
-                color: #5466bc;
-            }
-
-            #left-cont #left-cont-items-cont li:nth-of-type(3) {
-                color: #e28521;
-            }
-
-            #left-cont #left-cont-items-cont li:nth-of-type(4) {
-                color: #70abd8;
-            }
-
-            #left-cont #left-cont-items-cont li:nth-of-type(5) {
-                color: #bb2c29;
-            }
-
-            #left-cont #left-cont-items-cont li:nth-of-type(6) {
-                color: #e5bf4c;
-            }
-
-            #right-cont {
-                width: 50%;
-                display: flex;
-                align-items: center;
-            }
-
-
-            
-
-            .intro-bg {
-                fill:#FCECDD;
-            }
-
-            .blue-tone {
-                fill:#4F74F2;
-            }
-
-            .red-tone {
-                fill:#EA4C2A;
-            }
-
-            .orange-tone {
-                fill:#F6B025;
-            }
-
-            /* #mobile-intro-svg-el {
-                width: 100%;
-                height: 100vh;
-                display: none;
-            } */
-
-            @media only screen and (max-width : 991px) {
+                .dummy-section:first-of-type {    /* Delete This */
+                    background-color: lightblue;
+                }
 
                 #DATS-animated-intro {
-                    position: relative;
-                    z-index: 0;
-                    padding: 0px 20px;
-                }
-
-                #left-cont #left-cont-items-cont {
-                    position: relative;
-                    top: auto;
-                    transform: translateY(0);
-                    height: auto;
-                }
-
-                #left-cont #left-cont-items-cont h5 {
-                    font-size: 40px;
-                    line-height: 45px;
-                }
-
-                #left-cont #left-cont-items-cont ul {
-                    font-size: 24px;
-                    line-height: 28px;
-                    position: relative;
-                    left: auto;
-                    top: auto;
-                    transform: translate(0px, 0px);
-                }
-
-                #left-cont #left-cont-items-cont li {
-                    text-align: center;
-                    font-weight: 700;
-                }
-
-                #right-cont {
-                    position: absolute;
-                    left: 50%;
-                    top: 0;
-                    transform: translateX(-63%);
+                    height: 100vh;
                     width: 100%;
-                    height: 100%;
-                    z-index: -1;
-                    opacity: 0.15;
+                    box-sizing: border-box;
+                    display: flex;
+                    gap: 50px;
+                    padding: 0px 50px;
+                    background-color: #eee;
+                    overflow: hidden;
                 }
 
                 #left-cont {
-                    width: 100%;
+                    width: 50%;
+                    padding: 60px 0px;
+                    position: relative;
                 }
 
                 #left-cont h3 {
-                    font-size: 23px;
-                    line-height: 31px;
+                    font-size: 40px;
+                    line-height: 45px;
+                    color: black;
+                    font-family: sans-serif;
+                    text-align: center;
+                }
+
+                #left-cont #left-cont-items-cont {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    height: 100px;
+                    width: 100%;
+                }
+
+                #left-cont #left-cont-items-cont h5 {
+                    font-family: sans-serif;
+                    font-size: 50px;
+                    line-height: 55px;
+                    margin: 0;
+                    text-align: center;
+                    width: 100%;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, calc(-50% + 50px));
+                    opacity: 0;
+                    transition: all 0.7s cubic-bezier(0.190, 1.000, 0.220, 1.000);
+                }
+
+                #left-cont #left-cont-items-cont h5.show-h5 {
+                    opacity: 1;
+                    transform: translate(-50%, -50%);
                 }
 
 
+                #left-cont #left-cont-items-cont h5:nth-of-type(1) {
+                    color: #87b960;
+                }
 
-            }
+                #left-cont #left-cont-items-cont h5:nth-of-type(2) {
+                    color: #5466bc;
+                }
 
-        </style>
+                #left-cont #left-cont-items-cont h5:nth-of-type(3) {
+                    color: #e28521;
+                }
 
-        <!--  HTML Element  -->
-        <div class="other-content">
+                #left-cont #left-cont-items-cont h5:nth-of-type(4) {
+                    color: #70abd8;
+                }
+
+                #left-cont #left-cont-items-cont h5:nth-of-type(5) {
+                    color: #bb2c29;
+                }
+
+                #left-cont #left-cont-items-cont h5:nth-of-type(6) {
+                    color: #e5bf4c;
+                }
+
+                #left-cont #left-cont-items-cont ul {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 10px;
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                    font-size: 38px;
+                    line-height: 40px;
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    font-family: sans-serif;
+                    width: 100%;
+                }
+
+                #left-cont #left-cont-items-cont li:nth-of-type(1) {
+                    color: #87b960;
+                }
+
+                #left-cont #left-cont-items-cont li:nth-of-type(2) {
+                    color: #5466bc;
+                }
+
+                #left-cont #left-cont-items-cont li:nth-of-type(3) {
+                    color: #e28521;
+                }
+
+                #left-cont #left-cont-items-cont li:nth-of-type(4) {
+                    color: #70abd8;
+                }
+
+                #left-cont #left-cont-items-cont li:nth-of-type(5) {
+                    color: #bb2c29;
+                }
+
+                #left-cont #left-cont-items-cont li:nth-of-type(6) {
+                    color: #e5bf4c;
+                }
+
+                #right-cont {
+                    width: 50%;
+                    display: flex;
+                    align-items: center;
+                }
+
+                @media only screen and (max-width : 991px) {
+
+                    #DATS-animated-intro {
+                        position: relative;
+                        z-index: 0;
+                        padding: 0px 20px;
+                    }
+
+                    #left-cont #left-cont-items-cont {
+                        position: relative;
+                        top: auto;
+                        transform: translateY(0);
+                        height: auto;
+                    }
+
+                    #left-cont #left-cont-items-cont h5 {
+                        font-size: 40px;
+                        line-height: 45px;
+                    }
+
+                    #left-cont #left-cont-items-cont ul {
+                        font-size: 24px;
+                        line-height: 28px;
+                        position: relative;
+                        left: auto;
+                        top: auto;
+                        transform: translate(0px, 0px);
+                    }
+
+                    #left-cont #left-cont-items-cont li {
+                        text-align: center;
+                        font-weight: 700;
+                    }
+
+                    #right-cont {
+                        position: absolute;
+                        left: 50%;
+                        top: 0;
+                        transform: translateX(-63%);
+                        width: 100%;
+                        height: 100%;
+                        z-index: -1;
+                        opacity: 0.15;
+                    }
+
+                    #left-cont {
+                        width: 100%;
+                    }
+
+                    #left-cont h3 {
+                        font-size: 23px;
+                        line-height: 31px;
+                    }
+
+                }
+
+            </style>
+        <!-- End Required CSS  -->
+
+        <div class="dummy-section">     <!--  Dont use it  -->
             <h2>DUMMY SECTION</h2>
         </div>
 
 
+        <!--  Start Animation Section  -->
         <div id="DATS-animated-intro">
 
             <!--  Left Container  -->
@@ -294,7 +257,7 @@
             <!--  Right Container  -->
                 <div id="right-cont">
 
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                          viewBox="0 0 1080.4 832.3" xml:space="preserve"  preserveAspectRatio="xMidYMid slice">
 
                         <style type="text/css">
@@ -312,7 +275,7 @@
                                 l63.3,109.7c2.7,4.6,7.6,7.4,12.9,7.4H743c5.3,0,10.2-2.8,12.9-7.4l63.3-109.7c2.7-4.6,2.7-10.3,0-14.9l-63.3-109.7
                                 C753.2,294.4,748.3,291.6,743,291.6z"/>
 
-                            <image width="348" height="318" id="Scratches_x5F_Img" xlink:href="./images/molecule.png"  transform="matrix(0.7043 1.077852e-02 -1.077852e-02 0.7043 561.4279 302.1909)">
+                            <image width="348" height="318" id="Scratches_Img" xlink:href="./images/molecule.png"  transform="matrix(0.7043 1.077852e-02 -1.077852e-02 0.7043 561.4279 302.1909)">
                                     </image>
 
                             <g id="HR_Group" class="arm-item-grp">
@@ -453,20 +416,21 @@
                 </div>
             
         </div>
+        <!--  End Animation Section  -->
 
-        <div class="other-content">
+        <div class="dummy-section">     <!--  Dont use it  -->
             <h2>DUMMY CONTENT</h2>
         </div>
 
-        <div class="other-content">
+        <div class="dummy-section">     <!--  Dont use it  -->
             <h2>DUMMY CONTENT</h2>
         </div>
 
-        <div class="other-content">
+        <div class="dummy-section">     <!--  Dont use it  -->
             <h2>DUMMY CONTENT</h2>
         </div>
 
-        <div class="other-content">
+        <div class="dummy-section">     <!--  Dont use it  -->
             <h2>DUMMY CONTENT</h2>
         </div>
 
@@ -476,7 +440,7 @@
         <script src="js/ScrollTrigger.min.js"></script>
     <!-- End JavaScript Files -->
 
-    <!-- Begin Animation JavaScript -->
+    <!-- Begin Animation JavaScript Code -->
         <script type="text/javascript">
             
             (function () {
@@ -505,7 +469,7 @@
                                 "#e5bf4c"  // CMS color
                             ];
 
-                        //  Sets
+                        //  Sets (Initial State of Elements)
                             gsap.set(left_cont_h3, {
                                 xPercent: -50,
                                 autoAlpha: 0
@@ -631,7 +595,7 @@
                                 },
                                 onComplete: () => {
 
-                                    gsap.to(circle_grp_els[circle_grp_els.length - 1], { //  Scale the circle and text
+                                    gsap.to(circle_grp_els[circle_grp_els.length - 1], { //  Scale the last circle to 1
                                         transformOrigin: "center",
                                         scale: 1,
                                         duration: 0.3,
@@ -644,18 +608,18 @@
                                 }
                             });
 
-                            rotating_tl.to(".arm-text", {     //  Counter Rotate the arm text to keep them horizontal
+                            rotating_tl.to(".arm-text", {     //  Counter Rotate the arm text to keep them horizontal while the whole group is rotating
                                 rotation: -300,
                                 ease: "linear",
                                 transformOrigin: "50% 50%",
                                 svgOrigin: "900 300"
                             }, "<");
 
-                            rotating_tl.to("#left-cont #left-cont-items-cont ul li", {
+                            rotating_tl.to("#left-cont #left-cont-items-cont ul li", {  //  show the whole list
                                 xPercent: 0,
                                 autoAlpha: 1,
-                                duration: 0.3,
-                                stagger: 0.05,
+                                duration: 0.1,
+                                stagger: 0.01,
                             });
 
                             ScrollTrigger.refresh();
@@ -832,11 +796,11 @@
                                 svgOrigin: "900 300"
                             }, "<");
 
-                            rotating_tl.to("#left-cont #left-cont-items-cont ul li", {
+                            rotating_tl.to("#left-cont #left-cont-items-cont ul li", {  //  show the whole list
                                 xPercent: 0,
                                 autoAlpha: 1,
-                                duration: 0.3,
-                                stagger: 0.05,
+                                duration: 0.1,
+                                stagger: 0.01,
                             });
 
                             ScrollTrigger.refresh();
@@ -863,7 +827,7 @@
 
             })();
         </script>
-    <!-- End Animation JavaScript -->
+    <!-- End Animation JavaScript Code -->
 
 </body>
 
