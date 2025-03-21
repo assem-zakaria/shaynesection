@@ -619,7 +619,7 @@
                                 xPercent: 0,
                                 autoAlpha: 1,
                                 duration: 0.1,
-                                stagger: 0.005,
+                                stagger: 0.002,
                             });
 
                             ScrollTrigger.refresh();
@@ -650,7 +650,7 @@
                                 "#e5bf4c"  // CMS color
                             ];
 
-                        //  Sets
+                        //  Sets (Initial State of Elements)
                             gsap.set(left_cont_h3, {
                                 xPercent: -50,
                                 autoAlpha: 0
@@ -700,7 +700,7 @@
                                 pinSpacing: true,
                                 pinType: "fixed",
                                 start: "top top",
-                                end: "+=500%",
+                                end: "+=800%",
                                 scrub: 1,
                                 ease: "none",
                                 force3D: true,
@@ -776,7 +776,7 @@
                                 },
                                 onComplete: () => {
 
-                                    gsap.to(circle_grp_els[circle_grp_els.length - 1], { //  Scale the circle and text
+                                    gsap.to(circle_grp_els[circle_grp_els.length - 1], { //  Scale the last circle to 1
                                         transformOrigin: "center",
                                         scale: 1,
                                         duration: 0.3,
@@ -789,7 +789,7 @@
                                 }
                             });
 
-                            rotating_tl.to(".arm-text", {     //  Counter Rotate the arm text to keep them horizontal
+                            rotating_tl.to(".arm-text", {     //  Counter Rotate the arm text to keep them horizontal while the whole group is rotating
                                 rotation: -300,
                                 ease: "linear",
                                 transformOrigin: "50% 50%",
@@ -800,7 +800,7 @@
                                 xPercent: 0,
                                 autoAlpha: 1,
                                 duration: 0.1,
-                                stagger: 0.005,
+                                stagger: 0.002,
                             });
 
                             ScrollTrigger.refresh();
