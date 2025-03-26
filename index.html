@@ -36,23 +36,37 @@
                     height: 30vh;
                 }
 
+                .dummy-section.first {    /* Delete This */
+                    background-color: red;
+                    height: 30vh;
+                }
+
+                #dummy-header {
+                    background-color: gold;
+                    height: 50px;
+                    position: sticky;
+                    top: 0;
+                    z-index: 22;
+                }
+
                 #DATS-animated-intro {
-                    height: 100vh;
                     width: 100%;
                     -webkit-box-sizing: border-box;
                     box-sizing: border-box;
-                    padding: 0px 50px;
                     background-color: #eee;
                     overflow: hidden;
                     position: relative;
                 }
 
                 #intro-wrapper {
+                    border: 1px green dashed;
+                    position: relative;
                     display: -webkit-box;
                     display: -ms-flexbox;
                     display: flex;
-                    gap: 50px;
-                    height: 100%;
+                    gap: 10px;
+                    padding: 50px 70px;
+                    height: 630px;
                 }
 
                 #intro-overlay {
@@ -70,36 +84,32 @@
 
                 #intro-overlay.hide-overylay {
                     opacity: 0;
+                    pointer-events: none;
                 }
 
                 #left-cont {
                     width: 50%;
-                    padding: 60px 0px;
                     position: relative;
                 }
 
                 #left-cont h3 {
-                    font-size: 40px;
-                    line-height: 45px;
+                    font-size: 33px;
+                    line-height: 39px;
                     color: black;
                     font-family: sans-serif;
                     text-align: center;
                 }
 
                 #left-cont #left-cont-items-cont {
-                    position: absolute;
-                    top: 50%;
-                    -webkit-transform: translateY(-50%);
-                    -ms-transform: translateY(-50%);
-                    transform: translateY(-50%);
+                    position: relative;
                     height: 100px;
                     width: 100%;
                 }
 
                 #left-cont #left-cont-items-cont h5 {
                     font-family: sans-serif;
-                    font-size: 50px;
-                    line-height: 55px;
+                    font-size: 33px;
+                    line-height: 40px;
                     margin: 0;
                     text-align: center;
                     width: 100%;
@@ -162,14 +172,9 @@
                     list-style: none;
                     padding: 0;
                     margin: 0;
-                    font-size: 38px;
-                    line-height: 40px;
-                    position: absolute;
-                    left: 0;
-                    top: 50%;
-                    -webkit-transform: translateY(-50%);
-                    -ms-transform: translateY(-50%);
-                    transform: translateY(-50%);
+                    font-size: 30px;
+                    line-height: 35px;
+                    position: relative;
                     font-family: sans-serif;
                     width: 100%;
                 }
@@ -200,6 +205,7 @@
 
                 #right-cont {
                     width: 50%;
+                    height: 100%;
                     display: -webkit-box;
                     display: -ms-flexbox;
                     display: flex;
@@ -208,12 +214,29 @@
                     align-items: center;
                 }
 
+                #right-cont svg {
+                    height: 100%;
+                }
+
                 @media only screen and (max-width : 991px) {
 
                     #DATS-animated-intro {
                         position: relative;
                         z-index: 0;
-                        padding: 0px 20px;
+                    }
+
+                    #intro-wrapper {
+                        padding: 30px 10px;
+                    }
+
+                    #left-cont {
+                        width: 100%;
+                    }
+
+                    #left-cont h3 {
+                        font-size: 23px;
+                        line-height: 31px;
+                        margin: 0 0 30px 0;
                     }
 
                     #left-cont #left-cont-items-cont {
@@ -243,7 +266,8 @@
 
                     #left-cont #left-cont-items-cont li {
                         text-align: center;
-                        font-weight: 700;
+                        font-size: 25px;
+                        line-height: 30px;
                     }
 
                     #right-cont {
@@ -259,32 +283,27 @@
                         opacity: 0.15;
                     }
 
-                    #left-cont {
-                        width: 100%;
-                    }
-
-                    #left-cont h3 {
-                        font-size: 23px;
-                        line-height: 31px;
-                    }
-
                 }
 
             </style>
         <!-- End Required CSS  -->
 
-        <div class="dummy-section">     <!--  Dont use it  -->
-            <h2>DUMMY SECTION</h2>
+        <div id="dummy-header">
+            website header
+        </div>
+
+        <div class="dummy-section first">
+            <h2>FIRST SECTION</h2>
         </div>
 
 
         <!--  Start Animation Section  -->
         <div id="DATS-animated-intro">
 
-            <!-- Overlay -->
-                <div id="intro-overlay"></div>
-
             <div id="intro-wrapper">
+                <!-- Overlay -->
+                    <div id="intro-overlay"></div>
+                
                 <!--  Left Container  -->
                     <div id="left-cont">
                         
@@ -314,9 +333,9 @@
 
                 <!--  Right Container  -->
                     <div id="right-cont">
-
+                        <!-- preserveAspectRatio="xMidYMid slice" -->
                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                             viewBox="0 0 1080.4 832.3" xml:space="preserve"  preserveAspectRatio="xMidYMid slice">
+                             viewBox="0 0 1080.4 832.3" xml:space="preserve"  preserveAspectRatio="">
 
                             <style type="text/css">
                                 .st0{fill:none;stroke:#6D6E71;stroke-width:14;stroke-miterlimit:10;}
@@ -469,31 +488,28 @@
 
                         </svg>
 
-
-
                     </div>
                 
             </div>
-
             
-        </div>
-        <!--  End Animation Section  -->
+            <div class="dummy-section">
+                <h2>3RD SECTION</h2>
+            </div>
 
-        <div class="dummy-section">     <!--  Dont use it  -->
-            <h2>DUMMY CONTENT</h2>
+            <div class="dummy-section">
+                <h2>4TH SECTION</h2>
+            </div>
+
+            <div class="dummy-section">
+                <h2>5TH SECTION</h2>
+            </div>
+
+            <div class="dummy-section">
+                <h2>6TH SECTION</h2>
+            </div>
         </div>
 
-        <div class="dummy-section">     <!--  Dont use it  -->
-            <h2>DUMMY CONTENT</h2>
-        </div>
 
-        <div class="dummy-section">     <!--  Dont use it  -->
-            <h2>DUMMY CONTENT</h2>
-        </div>
-
-        <div class="dummy-section">     <!--  Dont use it  -->
-            <h2>DUMMY CONTENT</h2>
-        </div>
 
 
     <!-- Begin JavaScript Libraries Files -->
@@ -506,46 +522,46 @@
             
             (function () {
 
+                //  Variables
+                    const overlay_el = document.querySelector("#intro-overlay");
+                    const rotating_g = document.querySelector("#Rotating_Group");
+                    const left_items_els = document.querySelectorAll("#left-cont-items-cont .lc-item");
+                    const left_cont_h3 = document.querySelector("#left-cont h3");
+                    const right_cont_svg = document.querySelector("#right-cont svg");
+                    const hr_color = "#87b960";
+                    const sms_color = "#5466bc";
+                    const qms_color = "#e28521";
+                    const ems_color = "#70abd8";
+                    const ams_color = "#bb2c29";
+                    const cms_color = "#e5bf4c";
+                    let circle_grp_els = document.querySelectorAll("#Rotating_Group .circle-text-grp");
+                    const circles_colors_arr = [
+                        "#87b960", // HR color
+                        "#5466bc", // SMS color
+                        "#e28521", // QMS color
+                        "#70abd8", // EMS color
+                        "#bb2c29", // AMS color
+                        "#e5bf4c"  // CMS color
+                    ];
+
+                //  Sets (Initial State of Elements)
+                    gsap.set(left_cont_h3, {
+                        xPercent: -50,
+                        autoAlpha: 0
+                    });
+
+                    gsap.set(right_cont_svg, {
+                        xPercent: 50,
+                        autoAlpha: 0
+                    });
+
+                    gsap.set("#left-cont #left-cont-items-cont ul li", {
+                        xPercent: 30,
+                        autoAlpha: 0
+                    });
+
                 //  Desktop Function
                     function desktopFunction() {
-
-                        //  Variables
-                            const overlay_el = document.querySelector("#intro-overlay");
-                            const rotating_g = document.querySelector("#Rotating_Group");
-                            const left_items_els = document.querySelectorAll("#left-cont-items-cont .lc-item");
-                            const left_cont_h3 = document.querySelector("#left-cont h3");
-                            const right_cont_svg = document.querySelector("#right-cont svg");
-                            const hr_color = "#87b960";
-                            const sms_color = "#5466bc";
-                            const qms_color = "#e28521";
-                            const ems_color = "#70abd8";
-                            const ams_color = "#bb2c29";
-                            const cms_color = "#e5bf4c";
-                            let circle_grp_els = document.querySelectorAll("#Rotating_Group .circle-text-grp");
-                            const circles_colors_arr = [
-                                "#87b960", // HR color
-                                "#5466bc", // SMS color
-                                "#e28521", // QMS color
-                                "#70abd8", // EMS color
-                                "#bb2c29", // AMS color
-                                "#e5bf4c"  // CMS color
-                            ];
-
-                        //  Sets (Initial State of Elements)
-                            gsap.set(left_cont_h3, {
-                                xPercent: -50,
-                                autoAlpha: 0
-                            });
-
-                            gsap.set(right_cont_svg, {
-                                xPercent: 50,
-                                autoAlpha: 0
-                            });
-
-                            gsap.set("#left-cont #left-cont-items-cont ul li", {
-                                xPercent: 30,
-                                autoAlpha: 0
-                            });
 
                         //  Intro Show Elements Timeline
                             const intro_tl = gsap.timeline({
@@ -560,7 +576,7 @@
                               onStart: function () {
                                 setTimeout(() => {
                                     overlay_el.classList.add('hide-overylay');
-                                }, 500); // 2000ms = 2 seconds
+                                }, 500);
                               }
                             });
 
@@ -585,14 +601,14 @@
                                 pin: true,
                                 pinSpacing: true,
                                 pinType: "fixed",
-                                start: "top top",
+                                start: "top 50px",
                                 end: "+=500%",
                                 scrub: 1,
                                 ease: "none",
                                 force3D: true,
                                 anticipatePin: 0.5,
                                 once: true,
-                                // markers: true,
+                                markers: true,
                                 onLeave: function(self) {
                                     //  Since its scrub and pin and once, it will create a gap on top of the element after finish, use this code to prevent this gap 
                                     // self.scroll(self.start);
@@ -699,44 +715,6 @@
 
                 //  Mobile Function
                     function mobileFunction() {
-                        
-                        //  Variables
-                            const overlay_el = document.querySelector("#intro-overlay");
-                            const rotating_g = document.querySelector("#Rotating_Group");
-                            const left_items_els = document.querySelectorAll("#left-cont-items-cont .lc-item");
-                            const left_cont_h3 = document.querySelector("#left-cont h3");
-                            const right_cont_svg = document.querySelector("#right-cont svg");
-                            const hr_color = "#87b960";
-                            const sms_color = "#5466bc";
-                            const qms_color = "#e28521";
-                            const ems_color = "#70abd8";
-                            const ams_color = "#bb2c29";
-                            const cms_color = "#e5bf4c";
-                            let circle_grp_els = document.querySelectorAll("#Rotating_Group .circle-text-grp");
-                            const circles_colors_arr = [
-                                "#87b960", // HR color
-                                "#5466bc", // SMS color
-                                "#e28521", // QMS color
-                                "#70abd8", // EMS color
-                                "#bb2c29", // AMS color
-                                "#e5bf4c"  // CMS color
-                            ];
-
-                        //  Sets (Initial State of Elements)
-                            gsap.set(left_cont_h3, {
-                                xPercent: -50,
-                                autoAlpha: 0
-                            });
-
-                            gsap.set(right_cont_svg, {
-                                xPercent: 50,
-                                autoAlpha: 0
-                            });
-
-                            gsap.set("#left-cont #left-cont-items-cont ul li", {
-                                xPercent: 30,
-                                autoAlpha: 0
-                            });
 
                         //  Intro Show Elements Timeline
                             const intro_tl = gsap.timeline({
@@ -776,7 +754,7 @@
                                 pin: true,
                                 pinSpacing: true,
                                 pinType: "fixed",
-                                start: "top top",
+                                start: "top 50px",
                                 end: "+=500%",
                                 scrub: 1,
                                 ease: "none",
@@ -944,7 +922,6 @@
                                     start: "top 50%",
                                     ease: "none",
                                     force3D: true,
-                                    anticipatePin: 1,
                                     // markers: true
                                   },
                                   onStart: function () {
@@ -968,94 +945,106 @@
                                     duration: 1
                                 }, "<");
 
-                                intro_firefox_tl.to("#Rotating_Group", {   // Rotate the whole group
-                                rotation: 300,
-                                ease: "linear",
-                                transformOrigin: "50% 50%",
-                                svgOrigin: "900 300",
-                                duration: 10,
-                                 onUpdate: function () {
 
-                                    let rotation = gsap.getProperty("#Rotating_Group", "rotation") % 360;
-                                    
-                                    // Normalize rotation to always be between 0 and 360
-                                    if (rotation < 0) rotation += 360;
-                                    
-                                    // Round to nearest integer for precise detection
-                                    let roundedRotation = Math.round(rotation);
 
-                                    circle_grp_els.forEach((circle_grp, index) => {
-                                        // Each circle is positioned at a multiple of 60 degrees
-                                        let targetAngle = index * 60;
-                                        // Check if the current circle is at the 0-degree left position
-                                        let difference = Math.abs(targetAngle - roundedRotation) % 360;
+                                const rotation_firefox_tl = gsap.timeline({
+                                  scrollTrigger: {
+                                    trigger: "#DATS-animated-intro",
+                                    start: "top 15%",
+                                    ease: "none",
+                                    force3D: true,
+                                    // markers: true
+                                  },
+                                });
 
-                                        if (difference < 30 || difference > 330) { // The gap should be 60, 360 / 6 segments = 60
+                                rotation_firefox_tl.to("#Rotating_Group", {   // Rotate the whole group
+                                    rotation: 300,
+                                    ease: "linear",
+                                    transformOrigin: "50% 50%",
+                                    svgOrigin: "900 300",
+                                    duration: 10,
+                                     onUpdate: function () {
 
-                                            gsap.to(circle_grp, { //  Scale the circle and text
-                                                transformOrigin: "center",
-                                                scale: 1.8,
-                                                duration: 0.3,
-                                                ease: "power1.out" 
-                                            });
-
-                                            gsap.to(circle_grp.querySelector("circle"), { // Change the color of the circle
-                                                stroke: circles_colors_arr[index],
-                                                duration: 0.3,
-                                                ease: "power1.out" 
-                                            });
-
-                                            if (document.querySelectorAll("#left-cont-items-cont h5")[index].classList.contains("show-h5")) {
-                                                // console.log("h5 has the class show-h5");
-                                            } else {
-                                                document.querySelectorAll("#left-cont-items-cont h5").forEach(el => {
-                                                    el.classList.remove('show-h5');
-                                                });
-                                                document.querySelectorAll("#left-cont-items-cont h5")[index].classList.add('show-h5')
-                                            }
-
-                                        } else {
-
-                                            gsap.to(circle_grp, {
-                                                transformOrigin: "center",
-                                                scale: 1, 
-                                                duration: 0.3,
-                                                ease: "power1.out" 
-                                            });
+                                        let rotation = gsap.getProperty("#Rotating_Group", "rotation") % 360;
                                         
-                                        }
-                                    });
+                                        // Normalize rotation to always be between 0 and 360
+                                        if (rotation < 0) rotation += 360;
+                                        
+                                        // Round to nearest integer for precise detection
+                                        let roundedRotation = Math.round(rotation);
 
-                                },
-                                onComplete: () => {
+                                        circle_grp_els.forEach((circle_grp, index) => {
+                                            // Each circle is positioned at a multiple of 60 degrees
+                                            let targetAngle = index * 60;
+                                            // Check if the current circle is at the 0-degree left position
+                                            let difference = Math.abs(targetAngle - roundedRotation) % 360;
 
-                                    gsap.to(circle_grp_els[circle_grp_els.length - 1], { //  Scale the last circle to 1
-                                        transformOrigin: "center",
-                                        scale: 1,
-                                        duration: 0.3,
-                                        ease: "power1.out" 
-                                    });
+                                            if (difference < 30 || difference > 330) { // The gap should be 60, 360 / 6 segments = 60
 
-                                    document.querySelectorAll("#left-cont-items-cont h5").forEach(el => {
-                                        el.classList.remove('show-h5');
-                                    });
-                                }
-                            });
+                                                gsap.to(circle_grp, { //  Scale the circle and text
+                                                    transformOrigin: "center",
+                                                    scale: 1.8,
+                                                    duration: 0.3,
+                                                    ease: "power1.out" 
+                                                });
 
-                            intro_firefox_tl.to(".arm-text", {     //  Counter Rotate the arm text to keep them horizontal while the whole group is rotating
-                                rotation: -300,
-                                ease: "linear",
-                                transformOrigin: "50% 50%",
-                                svgOrigin: "900 300",
-                                duration: 10
-                            }, "<");
+                                                gsap.to(circle_grp.querySelector("circle"), { // Change the color of the circle
+                                                    stroke: circles_colors_arr[index],
+                                                    duration: 0.3,
+                                                    ease: "power1.out" 
+                                                });
 
-                            intro_firefox_tl.to("#left-cont #left-cont-items-cont ul li", {  //  show the whole list
-                                xPercent: 0,
-                                autoAlpha: 1,
-                                duration: 1,
-                                stagger: 0.002,
-                            });
+                                                if (document.querySelectorAll("#left-cont-items-cont h5")[index].classList.contains("show-h5")) {
+                                                    // console.log("h5 has the class show-h5");
+                                                } else {
+                                                    document.querySelectorAll("#left-cont-items-cont h5").forEach(el => {
+                                                        el.classList.remove('show-h5');
+                                                    });
+                                                    document.querySelectorAll("#left-cont-items-cont h5")[index].classList.add('show-h5')
+                                                }
+
+                                            } else {
+
+                                                gsap.to(circle_grp, {
+                                                    transformOrigin: "center",
+                                                    scale: 1, 
+                                                    duration: 0.3,
+                                                    ease: "power1.out" 
+                                                });
+                                            
+                                            }
+                                        });
+
+                                    },
+                                    onComplete: () => {
+
+                                        gsap.to(circle_grp_els[circle_grp_els.length - 1], { //  Scale the last circle to 1
+                                            transformOrigin: "center",
+                                            scale: 1,
+                                            duration: 0.3,
+                                            ease: "power1.out" 
+                                        });
+
+                                        document.querySelectorAll("#left-cont-items-cont h5").forEach(el => {
+                                            el.classList.remove('show-h5');
+                                        });
+                                    }
+                                });
+
+                                rotation_firefox_tl.to(".arm-text", {     //  Counter Rotate the arm text to keep them horizontal while the whole group is rotating
+                                    rotation: -300,
+                                    ease: "linear",
+                                    transformOrigin: "50% 50%",
+                                    svgOrigin: "900 300",
+                                    duration: 10
+                                }, "<");
+
+                                rotation_firefox_tl.to("#left-cont #left-cont-items-cont ul li", {  //  show the whole list
+                                    xPercent: 0,
+                                    autoAlpha: 1,
+                                    duration: 1,
+                                    stagger: 0.002,
+                                });
 
 
                         } else {
